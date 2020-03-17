@@ -111,7 +111,7 @@
     if (!window.localStorage) {
         alert("你的浏览器不支持localStorage");
     } else {
-        if (len > 0) {
+        if (len >= 0) {
             var ch = document.getElementById(localStorage.getItem(len));
             ch.style.top = "0px";
             text.style.background = localStorage.getItem(len);
