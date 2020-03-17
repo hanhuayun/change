@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background change</title>
+    <style>
+        body {
+            width: 550px;
+        }
+        
+        legend {
+            color: red;
+            font-size: 30px;
+        }
+        
+        #top {
+            border: 2px solid grey;
+            margin-bottom: 20px;
+            width: 500px;
+            height: 70px;
+        }
+        
+        ul {
+            padding: 10px;
+            margin: 0;
+        }
+        
+        li {
+            height: 35px;
+            width: 20px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        #grey {
+            background-color: grey;
+            margin-left: 0px;
+            position: relative;
+            top: 10px;
+            left: 0px;
+        }
+        
+        #purple {
+            background-color: purple;
+            position: relative;
+            top: 10px;
+            left: 0px;
+        }
+        
+        #pink {
+            background-color: pink;
+            position: relative;
+            top: 10px;
+            left: 0px;
+        }
+        
+        #blue {
+            background-color: blue;
+            position: relative;
+            top: 10px;
+            left: 0px;
+        }
+        
+        #yellow {
+            background-color: yellow;
+            position: relative;
+            top: 10px;
+            left: 0px;
+        }
+        
+        #green {
+            background-color: green;
+            position: relative;
+            top: 10px;
+            left: 0px;
+        }
+        
+        #text {
+            background-color: grey;
+            position: relative;
+            top: 10px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>网页换肤</legend>
+        <div id="top">
+            <ul>
+                <li id="grey" value="0" onclick="changeColor('grey')"></li>
+                <li id="purple" value="1" onclick="changeColor('purple')"></li>
+                <li id="pink" value="2" onclick="changeColor('pink')"></li>
+                <li id="blue" value="3" onclick="changeColor('blue')"></li>
+                <li id="yellow" value="4" onclick="changeColor('yellow')"></li>
+                <li id="green" value="5" onclick="changeColor('green')"></li>
+            </ul>
+        </div>
+        <div id="text">
+            <p>LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次在打开浏览器访问时仍然可以继续使用。</p>
+        </div>
+    </fieldset>
+</body>
+<script>
+    var text = document.getElementById("text");
+    var list = document.getElementsByTagName("li");
+    var len = localStorage.length;
+    console.log(len);
+    if (!window.localStorage) {
+        alert("你的浏览器不支持localStorage");
+    } else {
+        for (len; len > 0; len--) {
+            var ch = document.getElementById(localStorage.getItem(len));
+            if (len == 0) {
+                list[0].style.top = "5px";
+                text.style.background = "grey";
+            }
+            if (ch != null) {
+                ch.style.top = "0px";
+                text.style.background = localStorage.getItem(len);
+                break;
+            }
+        }
+
+        function changeColor(color) {
+            var col = document.getElementById(color);
+            col.style.top = "0px";
+            text.style.background = color;
+            localStorage.setItem(len++, color);
+            for (var i = 0; i < list.length; i++) {
+                if (list[i].value != col.value) {
+                    list[i].style.top = "10px";
+                }
+            }
+        }
+    }
+</script>
+
+</html>
