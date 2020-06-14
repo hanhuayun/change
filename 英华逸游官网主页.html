@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>官网</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container-fluid {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            .b1 {
+                background: #000;
+                height: 35px;
+            }
+            .center {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            #b11 div {
+                color: darkgray;
+                line-height: 35px;
+                text-align: center;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .navbar {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            .b2 {
+                line-height: 80px;
+                background: ghostwhite;
+            }
+            .b2 img {
+                margin-right: 100px;
+            }
+            .b2 li {
+                margin-top: 20px;
+                margin-left: 30px;
+            }
+            .b2 a {
+                color: darkgray;
+            }
+            .b2 li:hover {
+                border-bottom: 3px solid orangered;
+            }
+            .b2 li:hover a {
+                color: orangered;
+            }
+            .b2 button {
+                display: none;
+            }
+            .b3 {
+                width: 100%;
+                height: 446px;
+                background-image: url(banner.jpg);
+                background-size: cover;
+            }
+            .b3 a {
+                color: darkgray;
+            }
+            .b30 {
+                width: 1200px;
+                margin: auto;
+                position: relative;
+            }
+            .b31 {
+                color: darkgray;
+                position: absolute;
+                top: 70px;
+                left: 30px;
+            }
+            #bh1 {
+                width: 230px;
+                border-top: 1px solid darkgray;
+                margin-top: 50px;
+            }
+            #bh2 {
+                width: 270px;
+                border-bottom: 1px solid darkgray;
+                margin-top: 30px;
+            }
+            #sh {
+                display: none;
+            }
+            .b32 {
+                position: absolute;
+                top: 350px;
+                left: 450px;
+                display: flex;
+            }
+            .b32 button {
+                height: 50px;
+            }
+            .b4 {
+                background-image: url(back.png);
+            }
+            #main {
+                width: 1200px;
+                margin: auto;
+            }
+            #main h2 {
+                padding-top: 20px;
+                text-align: center;
+            }
+            #main h5 {
+                text-align: center;
+            }
+            #main h6 {
+                padding-top: 5px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .car {
+                width: 1200px;
+                height: 350px;
+                margin-top: 30px;
+                position: relative;
+            }
+            .carbanner1 {
+                width: 900px;
+                height: 350px;
+                background-image: url(Sbanner2.jpg);
+            }
+            .car1 {
+                line-height: 80px;
+                text-align: left;
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                top: 0px;
+                left: 550px;
+                color: #fff;
+            }
+            .carbanner2 {
+                width: 300px;
+                height: 350px;
+                background: midnightblue;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+            .car2 {
+                margin-top: 70px;
+                margin-left: 100px;
+                color: #fff;
+            }
+            #carH {
+                display: none;
+            }
+            .carbanner2 button {
+                width: 200px;
+                margin-top: 30px;
+                margin-left: 50px;
+                background: midnightblue;
+                border: 2px solid #fff;
+                color: #fff;
+            }
+            #popular {
+                width: 1200px;
+                height: 1100px;
+                margin: auto;
+                columns: 2 auto;
+                column-gap: 1px;
+            }
+            #p2 {
+                display: none;
+            }
+            .box1 {
+                width: 600px;
+                height: 500px;
+                position: relative;
+            }
+            .box1 div {
+                width: 590px;
+                height: 100px;
+                position: absolute;
+                top: 385px;
+                left: 0px;
+                background-color: black;
+                line-height: 40px;
+                text-align: left;
+                color: lightgray;
+                font-size: 25px;
+            }
+            .box1 div span {
+                font-size: 35px;
+            }
+            #box12 {
+                display: none;
+            }
+            .box2 {
+                width: 600px;
+                height: 540px;
+                position: relative;
+            }
+            .box2 div {
+                width: 590px;
+                height: 100px;
+                position: absolute;
+                top: 435px;
+                left: 0px;
+                background-color: black;
+                line-height: 40px;
+                text-align: left;
+                color: lightgray;
+                font-size: 25px;
+            }
+            .box2 div span {
+                font-size: 35px;
+            }
+            #box22 {
+                display: none;
+            }
+            #pbtn {
+                display: none;
+            }
+            .box3 {
+                width: 600px;
+                height: 200px;
+                position: relative;
+                top: -1100px;
+                left: 600px;
+            }
+            .box3 div {
+                width: 610px;
+                height: 100px;
+                position: absolute;
+                top: 195px;
+                left: 0px;
+                background-color: dimgray;
+                opacity: 0.9;
+                line-height: 40px;
+                text-align: left;
+                color: lightgray;
+                font-size: 25px;
+            }
+            .box3 div span {
+                font-size: 35px;
+            }
+            .box4 {
+                width: 600px;
+                height: 400px;
+                position: relative;
+                top: 100px;
+            }
+            .box4 div {
+                width: 610px;
+                height: 100px;
+                position: absolute;
+                top: 255px;
+                left: 0px;
+                background-color: dimgray;
+                opacity: 0.9;
+                line-height: 40px;
+                text-align: left;
+                color: lightgray;
+                font-size: 25px;
+            }
+            .box4 div span {
+                font-size: 35px;
+            }
+            .box5 {
+                width: 600px;
+                height: 400px;
+                position: relative;
+                top: 65px;
+            }
+            .box5 div {
+                width: 608px;
+                height: 100px;
+                position: absolute;
+                top: 265px;
+                left: 0px;
+                background-color: dimgray;
+                opacity: 0.9;
+                line-height: 40px;
+                text-align: left;
+                color: lightgray;
+                font-size: 25px;
+            }
+            .box5 div span {
+                font-size: 35px;
+            }
+            #m2 {
+                display: none;
+            }
+            .m1 {
+                height: 350px;
+                position: relative;
+            }
+            .m11 {
+                width: 500px;
+                height: 350px;
+            }
+            .m12 {
+                width: 705px;
+                height: 350px;
+                background: midnightblue;
+                color: #fff;
+                padding-top: 80px;
+                position: absolute;
+                top: 0px;
+                right: 5px;
+            }
+            #m12 {
+                display: none;
+            }
+            .m12 h3 {
+                text-align: center;
+            }
+            .m12 div {
+                text-align: left;
+                line-height: 2.5em;
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+            .m3 {
+                height: 400px;
+                background: midnightblue;
+            }
+            #m3 {
+                display: none;
+            }
+            .u1 li {
+                width: 300px;
+                height: 250px;
+                margin-top: 30px;
+                margin-left: 75px;
+                line-height: 350px;
+                text-align: center;
+                color: #fff;
+            }
+            #li1 {
+                background-image: url(icon11.png), url(rorate.png);
+                background-position: center, center;
+                background-repeat: no-repeat, no-repeat;
+            }
+            #li2 {
+                background-image: url(icon22.png), url(rorate.png);
+                background-position: center, center;
+                background-repeat: no-repeat, no-repeat;
+            }
+            #li3 {
+                background-image: url(icon33.png), url(rorate.png);
+                background-position: center, center;
+                background-repeat: no-repeat, no-repeat;
+            }
+            .u2 li {
+                width: 300px;
+                height: 150px;
+                margin-left: 75px;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+            }
+            .b5 {
+                background: #000;
+                height: 500px;
+            }
+            .final {
+                padding-top: 40px;
+                width: 1200px;
+                margin: auto;
+            }
+            .final ul li:nth-of-type(1) {
+                font-size: 17px;
+            }
+            .final ul li {
+                font-size: 10px;
+                text-align: center;
+                color: darkgray;
+            }
+            .fu1 {
+                width: 650px;
+                position: relative;
+            }
+            .fu1 ul li {
+                width: 100px;
+                height: 70px;
+                margin-left: 20px;
+            }
+            #fu11 {
+                position: absolute;
+                top: 0px;
+            }
+            .fu2 {
+                width: 1200px;
+                height: 40px;
+            }
+            .fu2 ul li {
+                height: 40px;
+                margin-left: 20px;
+            }
+            .fu4 a {
+                color: darkgray;
+            }
+            .fu51 {
+                margin-top: 40px;
+                line-height: 100px;
+                text-align: center;
+                border-top: 1px solid darkgray;
+                color: darkgray;
+            }
+            .fu52 {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 500px) {
+            .b1 {
+                display: none;
+            }
+            .b2 img {
+                margin-left: 10px;
+            }
+            .btn2 {
+                background: orangered;
+                margin-left: 100px;
+                font-size: large;
+                color: #fff;
+            }
+            .b3 {
+                width: 100%;
+                height: 300px;
+                background-image: url(banner.jpg);
+                background-size: 100% 300px;
+                position: relative;
+                top: -20px;
+            }
+            .b3 a {
+                color: darkgray;
+            }
+            .b31 {
+                color: darkgray;
+                position: absolute;
+                top: 40px;
+                left: 30px;
+            }
+            #bh1 {
+                display: none;
+            }
+            #bh2 {
+                display: none;
+            }
+            #sh {
+                margin-top: 20px;
+            }
+            .b32 {
+                position: absolute;
+                top: 200px;
+                left: 50px;
+                display: flex;
+                border: 2px solid #000;
+            }
+            .b32 button {
+                height: 50px;
+            }
+            .b4 {
+                height: 900px;
+                background-color: rgb(245, 245, 245);
+            }
+            #main {
+                margin: auto;
+                position: relative;
+                top: -10px;
+            }
+            .h2 {
+                color: navy;
+                text-align: center;
+            }
+            .h5 {
+                text-align: left;
+            }
+            #main {
+                padding-top: 10px;
+            }
+            .car {
+                width: 100%;
+                height: 150px;
+                background-color: #fff;
+                position: relative;
+            }
+            .car1 {
+                position: absolute;
+                top: -20px;
+                left: 110px;
+            }
+            .car2 {
+                display: none;
+            }
+            #carH {
+                margin-left: 10px;
+            }
+            .carbanner2 button {
+                width: 110px;
+                height: 40px;
+                border: 1px solid darkgray;
+                color: darkgray;
+                background: #fff;
+                position: absolute;
+                top: 45px;
+                right: 3px;
+            }
+            #p1 {
+                display: none;
+            }
+            #p2 {
+                width: 460px;
+                margin: auto;
+                border-bottom: 1px solid darkgray;
+            }
+            #p2 span {
+                color: orangered;
+            }
+            #popular {
+                width: 460px;
+                height: 900px;
+                margin: auto;
+                margin-top: 10px;
+            }
+            .box1 {
+                width: 460px;
+                height: 400px;
+                position: relative;
+            }
+            .box1 img {
+                width: 460px;
+                height: 300px;
+            }
+            .box1 div {
+                width: 460px;
+                height: 80px;
+                position: absolute;
+                top: 285px;
+                left: 0px;
+                background-color: black;
+                line-height: 35px;
+                text-align: left;
+                color: lightgray;
+                font-size: 20px;
+                opacity: 0.9;
+            }
+            .box1 div span {
+                font-size: 30px;
+            }
+            #box11 {
+                display: none;
+            }
+            .box2 {
+                width: 460px;
+                height: 400px;
+                position: relative;
+            }
+            .box2 img {
+                width: 460px;
+                height: 300px;
+            }
+            .box2 div {
+                width: 460px;
+                height: 80px;
+                position: absolute;
+                top: 230px;
+                left: 0px;
+                background-color: black;
+                line-height: 40px;
+                text-align: left;
+                color: lightgray;
+                font-size: 20px;
+                opacity: 0.9;
+            }
+            #box21 {
+                display: none;
+            }
+            .box2 div span {
+                font-size: 30px;
+            }
+            .box3 {
+                display: none;
+            }
+            .box4 {
+                display: none;
+            }
+            .box5 {
+                display: none;
+            }
+            #pbtn {
+                width: 160px;
+                height: 40px;
+                margin: auto;
+                color: darkgray;
+            }
+            #pbtn button {
+                width: 160px;
+                height: 40px;
+                border: 1px solid darkgray;
+                position: absolute;
+                top: 980px;
+            }
+            #pbtn img {
+                margin-left: 10px;
+            }
+            #m1 {
+                display: none;
+            }
+            #m2 {
+                width: 460px;
+                margin: auto;
+                border-bottom: 1px solid darkgray;
+                position: absolute;
+                top: 1060px;
+                left: 20px;
+            }
+            #m2 span {
+                color: orangered;
+            }
+            .mission {
+                width: 460px;
+                height: 1100px;
+                margin: auto;
+                margin-top: 10px;
+                background-image: url(back.png);
+            }
+            .mission img {
+                width: 460px;
+                height: 250px;
+            }
+            .m12 {
+                display: none;
+            }
+            #m12 h3 {
+                text-align: center;
+            }
+            #m12 div {
+                line-height: 25px;
+                font-weight: bold;
+            }
+            .m3 {
+                display: none;
+            }
+            #m3 {
+                width: 460px;
+                height: 500px;
+                margin: auto;
+            }
+            .mdiv {
+                width: 460px;
+                height: 150px;
+                border-bottom: 1px solid darkgray;
+            }
+            #m3 h3 {
+                text-align: center;
+            }
+            #m3 img {
+                width: 60px;
+                height: 60px;
+                margin-left: 40px;
+                margin-top: 40px;
+            }
+            .mdiv div {
+                width: 280px;
+                height: 100px;
+                float: right;
+                margin-top: 35px;
+                margin-right: 20px;
+                text-align: left;
+                line-height: 30px;
+            }
+            .b5 {
+                height: 220px;
+                background: #000;
+                width: 100%;
+                position: absolute;
+                top: 2750px;
+            }
+            .final {
+                display: none;
+            }
+            .fu51 {
+                display: none;
+            }
+            .fu52 {
+                margin-top: 70px;
+                text-align: center;
+                color: darkgray;
+                line-height: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="b1">
+            <div class="center" id="b11">
+                <div><img src="tell.png" alt="">
+                    <h5>&nbsp;400-808-8682&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请登录&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;注册
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="b2">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="btn1 navbar-toggle" data-toggle="collapse" data-target="#bs-1">
+                              <span class="sr-only">导航开关</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                        </button>
+                    <img src="logo.png">
+                    <button class="btn2 btn">快速定制</button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">热门路线</a></li>
+                        <li><a href="#">签证推荐</a></li>
+                        <li><a href="#">使命愿景</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="b3">
+            <div class="b30">
+                <div class="b31">
+                    <h1>悠游古欧洲 遍览德法瑞意</h1>
+                    <div id="bh1">
+                        <h5>巴黎卢浮宫、塞纳河游船、凡尔赛宫</h5>
+                    </div>
+                    <div id="bh2">
+                        <h5>少女峰、大运河游船、金色列车、西庸城堡</h5>
+                    </div>
+                    <div id="sh">
+                        <h4>全程升级热早+1晚5星酒店</h4>
+                    </div>
+                </div>
+                <div class="b32 btn-group">
+                    <button type="button" class="btn btn-default"><img src="position.png" alt="">&nbsp;&nbsp;&nbsp;目的地</button>
+                    <button type="button" class="btn">|&nbsp;&nbsp;&nbsp;<a href="#">日本</a>&nbsp;&nbsp;&nbsp;<a href="#">美国</a>&nbsp;&nbsp;&nbsp;<a href="#">英国</a>&nbsp;&nbsp;&nbsp;<a href="#">地中海&nbsp;&nbsp;&nbsp;</a></button>
+                    <button type="button" class="btn btn-warning"><img src="search.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+        <div class="b4">
+            <div id="main">
+                <div class="car">
+                    <div class=" carbanner1">
+                        <div id="carH"><img src="carH.png"></div>
+                        <div class="car1">
+                            <p class="h2">机场接送 省钱省心</p>
+                            <p class="h5">
+                                </br>提供上海、苏州、无锡各市</br>
+                                </br>往返机场、码头接送服务，更有包车服务</p>
+                        </div>
+                    </div>
+                    <div class="carbanner2">
+                        <div class="car2"><img src="car.png" alt="">
+                            <p class="h3">车辆接送</p>
+                        </div>
+                        <div><button type="button" class="btn btn-lg">查看详情</button></div>
+                    </div>
+                </div>
+                <div id="p1">
+                    <h2>热门线路</h2>
+                    <h6>Popular tourist routes</h6>
+                </div>
+                <div id="p2">
+                    <h2 style="color:#000;"><span>|</span>&nbsp;&nbsp;热门路线</h2>
+                </div>
+                <div id="popular">
+                    <div class="box1">
+                        <img src="hot1.jpg" alt="">
+                        <div class="box11">
+                            &nbsp;&nbsp;海南三亚5天4晚，纯玩、4晚红树林度假王国<br>&nbsp;&nbsp;￥<span>2580</span> /人起
+                        </div>
+                        <div id="box12">
+                            &nbsp;&nbsp;海南三亚5天4晚</br>&nbsp;&nbsp;纯玩、4晚红树林度假王国&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥<span>2580</span> /人起
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img src="hot2.jpg" alt="">
+                        <div id="box21">
+                            &nbsp;&nbsp;德意法瑞欧洲4国，ABCD任意线路由您挑选<br>&nbsp;&nbsp;￥<span>7999</span> /人起
+                        </div>
+                        <div id="box22">
+                            &nbsp;&nbsp;德意法瑞欧洲4国</br>&nbsp;&nbsp;ABCD任意线路由您挑选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥<span>7999</span> /人起
+                        </div>
+                    </div>
+                    <div id="pbtn"><button type="button" class="btn btn-lg">查看更多<img src="right.png" alt=""></button></div>
+                    <div class="box3">
+                        <img src="hot3.jpg" alt="">
+                        <div>
+                            &nbsp;&nbsp;曼谷+芭提雅国际五星，赠送2220大礼包，绝无自费<br>&nbsp;&nbsp;￥<span>2799</span> /人起
+                        </div>
+                    </div>
+                    <div class="box4">
+                        <img src="hot4.jpg" alt="">
+                        <div>
+                            &nbsp;&nbsp;日本本州游&nbsp;&nbsp;樱花、寿司、温泉、美食<br>&nbsp;&nbsp;￥<span>5399</span> /人起
+                        </div>
+                    </div>
+                    <div class="box5">
+                        <img src="hot5.jpg" alt="">
+                        <div>
+                            &nbsp;&nbsp;斯里兰卡7天6晚全景游&nbsp;&nbsp;保证入住2晚香格里拉<br>&nbsp;&nbsp;￥<span>7999</span> /人起
+                        </div>
+                    </div>
+                </div>
+                <div id="m1">
+                    <h2>使命与愿景</h2>
+                    <h6>让旅游回归本质，体验纯粹旅游</h6>
+                </div>
+                <div id="m2">
+                    <h2 style="color:#000;font-size: 25px;"><span>|</span>&nbsp;&nbsp;使命与愿景:
+                        <span style="font-size: 20px;color:#000;">让旅游回归本质，体验纯粹旅游</span>
+                    </h2>
+                </div>
+                <div class="mission">
+                    <div class="m1">
+                        <div class="m11"><img src="mission1.jpg" alt=""></div>
+                        <div class="m12">
+                            <h3>服务理念及优势</h3>
+                            <div class="h5">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</div>
+                        </div>
+                        <div id="m12">
+                            <h3>--服务理念--</h3>
+                            <div class="h5">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</div>
+                        </div>
+                    </div>
+                    <div class="m2">
+                        <img src="mission2.jpg" alt="">
+                    </div>
+                    <div class="m3">
+                        <ul class="u1 list-inline">
+                            <li id="li1">品质行程</li>
+                            <li id="li2">品质消费</li>
+                            <li id="li3">品质小团</li>
+                        </ul>
+                        <ul class="u2 list-inline">
+                            <li class="text-center">旅游达人精心设计、基于口碑反复打磨，</br>全网最好，敢跟任何产品比</li>
+                            <li class="text-center">不推自费，</br>不进垃圾购物店和伪景点</li>
+                            <li class="text-center">独立成团不散拼,</br>只跟亲朋好友一起玩，每天发团</li>
+                        </ul>
+                    </div>
+                    <div id="m3">
+                        <h3>--服务优势--</h3>
+                        <div class="mdiv">
+                            <img src="icon11.png" alt="">
+                            <div>
+                                <p>旅游达人精心设计、基于口碑反复打磨，</br>告别人山人海鸡肋景点。</br>全网最好，敢跟任何产品比</p>
+                            </div>
+                        </div>
+                        <div class="mdiv">
+                            <img src="icon22.png" alt="">
+                            <div>
+                                <p>比不推自费，</br>不进垃圾购物店和伪景点</p>
+                            </div>
+                        </div>
+                        <div class="mdiv">
+                            <img src="icon33.png" alt="">
+                            <div>
+                                <p>独立成团不散拼,</br>只跟亲朋好友一起玩，每天发团</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b5">
+            <div class="final">
+                <ul class="fu1 list-inline">
+                    <li id="fu11">合作伙伴</li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li><img src="xiecheng.png"></br>
+                        </br>携程网</li>
+                    <li><img src="feizhu.png"></br>
+                        </br>阿里飞猪</li>
+                    <li><img src="quna.png"></br>
+                        </br>去哪儿</li>
+                    <li><img src="suzhou.png"></br>
+                        </br>苏州旅游局</li>
+                </ul>
+                <ul class="fu2 list-inline">
+                    <li>热门位置</li>
+                    <li>韩国</li>
+                    <li>日本</li>
+                    <li>菲律宾</li>
+                    <li>越南</li>
+                    <li>老挝</li>
+                    <li>柬埔寨</li>
+                    <li>泰国</li>
+                    <li>马来西亚</li>
+                    <li>新加坡</li>
+                    <li>印度尼西亚</li>
+                    <li>印度</li>
+                    <li>斯里兰卡</li>
+                    <li>土耳其</li>
+                    <li>阿联酋</li>
+                    <li>西班牙</li>
+                    <li>意大利</li>
+                    <li>希腊</li>
+                    <li>法国</li>
+                    <li>比利时</li>
+                    <li>荷兰</li>
+                    <li>美国</li>
+                    <li>瑞士</li>
+                    <li>奥地利</li>
+                    <li>德国</li>
+                    <li>匈牙利</li>
+                    <li>俄罗斯</li>
+                    <li>穆克</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li>芬兰</li>
+                    <li>葡萄牙</li>
+                    <li>冰岛</li>
+                    <li>美国</li>
+                    <li>加拿大</li>
+                    <li>巴西</li>
+                    <li>阿根廷</li>
+                    <li>澳大利亚</li>
+                    <li>新西兰</li>
+                </ul>
+                <ul class="fu3 list-inline">
+                    <li>主题服务</li>
+                    <li>海岛度假</li>
+                    <li>历史文化</li>
+                    <li>探索冒险</li>
+                    <li>美食购物</li>
+                    <li>都市生活</li>
+                    <li>海外游学</li>
+                    <li>邮轮度假</li>
+                    <li>蜜月摄影</li>
+                    <li>亲子乐园</li>
+                </ul>
+                <ul class="fu4 list-inline">
+                    <li>友情链接</li>
+                    <li><a href="#">马蜂窝</a></li>
+                    <li><a href="#">穷游</a></li>
+                    <li><a href="#">booking</a></li>
+                    <li><a href="#">苏州旅游局</a></li>
+                    <li><a href="#">驴友网</a></li>
+                    <li><a href="#">吾爱全球签证中心</a></li>
+                    <li><a href="#">酒店团购</a></li>
+                    <li><a href="#">携程旅游攻略</a></li>
+                    <li><a href="#">天巡职航在线</a></li>
+                    <li><a href="#">满天飞旅游网</a></li>
+                    <li><a href="#">中国旅游网</a></li>
+                    <li><a href="#">澳乐网</a></li>
+                    <li><a href="#">背包兔旅游行程</a></li>
+                    <li><a href="#">出境旅游</a></li>
+                    <li><a href="#">国际酒店</a></li>
+                    <li><a href="#">广州旅行社</a></li>
+                    <li><a href="#">出境旅游</a></li>
+                    <li><a href="#">517旅行</a></li>
+                    <li><a href="#">花生游</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li><a href="#">家园网</a></li>
+                    <li><a href="#">海外婚礼</a></li>
+                </ul>
+            </div>
+            <div class="fu51">
+                <p>2020&nbsp;&nbsp;&nbsp;&nbsp;@苏州英华国际旅游有限公司&nbsp;&nbsp;版权所有</p>
+            </div>
+            <div class="fu52">
+                <p>苏ICP备号.&nbsp;&nbsp;2020</br>@苏州英华国际旅游有限公司&nbsp;&nbsp;版权所有</br>技术支持&nbsp;&nbsp;杭州科技</p>
+            </div>
+        </div>
+</body>
+
+</html>
